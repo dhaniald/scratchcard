@@ -1,0 +1,36 @@
+body{
+
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.card{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+
+}
+.card-inner{
+    height: 400px;
+    width: 400px;
+    background:url(/img/a.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;  
+
+}
+span{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  background:url(/img/st.png);
+  background-size: 33%;
+  background-attachment: fixed;
+  background-position: 650px 300px;
+  background-repeat: no-repeat;
+pointer-events:none;
+}
