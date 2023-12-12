@@ -11,7 +11,24 @@
   <div class="Card">
     <div class="card-inner"></div>
   </div>
+  <!-- <script>
+    const wrap = document.querySelector('.card-inner');
 
+    function handleScratch(e) {
+      e.preventDefault();
+      const clientX = e.type === 'mousedown' ? e.pageX : e.touches[0].clientX;
+      const clientY = e.type === 'mousedown' ? e.pageY : e.touches[0].clientY;
+
+      const erase = document.createElement('span');
+      erase.style.left = `${clientX - wrap.getBoundingClientRect().left - 15}px`;
+      erase.style.top = `${clientY - wrap.getBoundingClientRect().top - 15}px`;
+      wrap.appendChild(erase);
+    }
+
+    wrap.addEventListener('mousedown', handleScratch);
+    wrap.addEventListener('touchstart', handleScratch);
+  </script> -->
+<!-- 
   <script>
     const wrap = document.querySelector('.card-inner');
 
@@ -27,9 +44,10 @@
 
     wrap.addEventListener('mousedown', handleScratch);
     wrap.addEventListener('touchstart', handleScratch);
-  </script>
-  <!-- <script>
+  </script> -->
+  <script>
     document.addEventListener('mousemove',function(e){
+      e.preventDefault();
        const wrap = document.querySelector('.card-inner');
       const erase = document.createElement('span');
       erase.style.left = e.offsetX+'px';
@@ -38,7 +56,7 @@
     });
      
     
-  </script> -->
+  </script>
 
 </body>
 </html>

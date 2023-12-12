@@ -11,6 +11,7 @@ body{
   height: 400px;
   width: 400px;
   overflow: hidden;
+  touch-action: none;
 
 }
 .card-inner{
@@ -19,18 +20,19 @@ body{
     background:url(/img/a.png);
     background-repeat: no-repeat;
     background-position: center center;
-    overflow: hidden;  
+    overflow: hidden;
+    position: relative;  
 
 }
 span{
   position: absolute;
   width: 90px;
   height: 90px;
-  border-radius: 50px;
+  border-radius: 100px;
   background:url(/img/st.png);
   background-size: 33%;
   background-attachment: fixed;
-  background-position: 650px 300px;
+  background-position: 550px 300px;
   background-repeat: no-repeat;
-pointer-events:none;
+  pointer-events:none;
 }
