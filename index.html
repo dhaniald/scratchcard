@@ -13,6 +13,22 @@
   </div>
 
   <script>
+    const wrap = document.querySelector('.card-inner');
+
+    function handleScratch(e) {
+      e.preventDefault();
+      if (e.type === 'mousedown' || e.type === 'touchstart') {
+        const erase = document.createElement('span');
+        erase.style.left = `${(e.pageX || e.touches[0].pageX) - wrap.getBoundingClientRect().left}px`;
+        erase.style.top = `${(e.pageY || e.touches[0].pageY) - wrap.getBoundingClientRect().top}px`;
+        wrap.appendChild(erase);
+      }
+    }
+
+    wrap.addEventListener('mousedown', handleScratch);
+    wrap.addEventListener('touchstart', handleScratch);
+  </script>
+  <!-- <script>
     document.addEventListener('mousemove',function(e){
        const wrap = document.querySelector('.card-inner');
       const erase = document.createElement('span');
@@ -22,7 +38,7 @@
     });
      
     
-  </script>
+  </script> -->
 
 </body>
 </html>
